@@ -64,6 +64,14 @@ o::Send, {9}
 /::Send, {0}
 `;::Send, {.}
 
+#if ToggleSymLayout
+i::Send, {`(}
+o::Send, {`)}
+k::Send, {`[}
+l::Send, {`]}
+,::Send, {`{}
+.::Send, {`}}
+
 #if ToggleCGxLayout
 ; Top Row
 q::w
@@ -116,3 +124,11 @@ m::m
 1 & o::Send, {9}
 1 & /::Send, {0}
 1 & `;::Send, {.}
+
+; Symbols
+2 & i::Send, {`(}
+2 & o::Send, {`)}
+2 & k::Send, {`[}
+2 & l::Send, {`]}
+2 & ,::Send, {`{}
+2 & .::Send, {`}}
