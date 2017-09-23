@@ -88,20 +88,25 @@ l::Send, {`]}
 
 #if ToggleMouseLayout
 ; Right Hand Mouse
-w::MouseMove, 0, -10, .5, R
-a::MouseMove, -10, 0, .5, R
-s::MouseMove, 0, 10, .5, R
-d::MouseMove, 10, 0, .5, R
-q::RButton
-e::LButton
-x::MButton
++e::MouseMove, 0, -100, .5, R
++s::MouseMove, -100, 0, .5, R
++d::MouseMove, 0, 100, .5, R
++f::MouseMove, 100, 0, .5, R
 
-+w::MouseMove, 0, -100, .5, R
-+a::MouseMove, -100, 0, .5, R
-+s::MouseMove, 0, 100, .5, R
-+d::MouseMove, 100, 0, .5, R
+e::MouseMove, 0, -10, .5, R
+s::MouseMove, -10, 0, .5, R
+d::MouseMove, 0, 10, .5, R
+f::MouseMove, 10, 0, .5, R
+w::RButton
+r::LButton
+c::MButton
 
 ; Left Hand Mouse
++i::MouseMove, 0, -100, .5, R
++j::MouseMove, -100, 0, .5, R
++k::MouseMove, 0, 100, .5, R
++l::MouseMove, 100, 0, .5, R
+
 i::MouseMove, 0, -10, .5, R
 j::MouseMove, -10, 0, .5, R
 k::MouseMove, 0, 10, .5, R
@@ -109,11 +114,6 @@ l::MouseMove, 10, 0, .5, R
 u::LButton
 o::RButton
 ,::MButton
-
-+i::MouseMove, 0, -100, .5, R
-+j::MouseMove, -100, 0, .5, R
-+k::MouseMove, 0, 100, .5, R
-+l::MouseMove, 100, 0, .5, R
 
 
 #if ToggleCGxLayout
@@ -176,3 +176,26 @@ m::m
 2 & l::Send, {`]}
 2 & ,::Send, {`{}
 2 & .::Send, {`}}
+
+; Mouse
+; Right Hand Mouse
+    ;9 & w::MouseMove, 0, -10, .5, R
+    ;9 & a::MouseMove, -10, 0, .5, R
+    ;9 & s::MouseMove, 0, 10, .5, R
+    ;9 & d::MouseMove, 10, 0, .5, R
+9 & e::Send, {Up}
+9 & s::Send, {Left}
+9 & d::Send, {Down}
+9 & f::Send, {Right}
+9 & w::Send, {RButton}
+9 & r::Send, {LButton}
+9 & c::Send, {MButton}
+
+; Left Hand Mouse
+9 & i::MouseMove, 0, -10, .5, R
+9 & j::MouseMove, -10, 0, .5, R
+9 & k::MouseMove, 0, 10, .5, R
+9 & l::MouseMove, 10, 0, .5, R
+9 & u::Send, {LButton}
+9 & o::Send, {RButton}
+9 & ,::Send, {MButton}
