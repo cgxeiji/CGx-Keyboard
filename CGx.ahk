@@ -1,7 +1,55 @@
+; Toggle CGx Layout with altL + altR
+ToggleCGxLayout := True
+
 ; Toggle Numeric Layout with '1'
 ToggleNumLayout := False
 
-^1::ToggleNumLayout := !ToggleNumLayout
+; Toggle Symbolic Layout with '2'
+ToggleSymLayout := False
+
+TurnOfLayouts() {
+    global
+    ToggleCGxLayout := False
+    ToggleNumLayout := False
+    ToggleSymLayout := False
+}
+
+ToggleLayout(x) {
+    global
+    If (x = 0) {
+        ToggleCGxLayout := !ToggleCGxLayout
+        If (ToggleCGxLayout = True) {
+            TurnOfLayouts()
+            ToggleCGxLayout := True
+        } Else {
+            TurnOfLayouts()
+        }
+    } Else If (x = 1) {
+        If (ToggleNumLayout = False) {
+            TurnOfLayouts()
+            ToggleNumLayout := True
+        } Else {
+            TurnOfLayouts()
+            ToggleCGxLayout := True
+        }
+    } Else If (x = 2) {
+        If (ToggleSymLayout = False) {
+            TurnOfLayouts()
+            ToggleSymLayout := True
+        } Else {
+            TurnOfLayouts()
+            ToggleCGxLayout := True
+        }
+    }
+
+    Return
+}
+
+^1::ToggleLayout(1)
+
+^2::ToggleLayout(2)
+
+^0::ToggleLayout(0)
 
 #if ToggleNumLayout
 m::Send, {1}
@@ -16,7 +64,7 @@ o::Send, {9}
 /::Send, {0}
 `;::Send, {.}
 
-#if Not ToggleNumLayout
+#if ToggleCGxLayout
 ; Top Row
 q::w
 w::l
