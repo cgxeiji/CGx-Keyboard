@@ -7,11 +7,15 @@ ToggleNumLayout := False
 ; Toggle Symbolic Layout with '2'
 ToggleSymLayout := False
 
+; Toggle Mouse Layout with '9'
+ToggleMouseLayout := False
+
 TurnOfLayouts() {
     global
     ToggleCGxLayout := False
     ToggleNumLayout := False
     ToggleSymLayout := False
+    ToggleMouseLayout := False
 }
 
 ToggleLayout(x) {
@@ -40,6 +44,14 @@ ToggleLayout(x) {
             TurnOfLayouts()
             ToggleCGxLayout := True
         }
+    } Else If (x = 9) {
+        If (ToggleMouseLayout = False) {
+            TurnOfLayouts()
+            ToggleMouseLayout := True
+        } Else {
+            TurnOfLayouts()
+            ToggleCGxLayout := True
+        }
     }
 
     Return
@@ -48,6 +60,8 @@ ToggleLayout(x) {
 ^1::ToggleLayout(1)
 
 ^2::ToggleLayout(2)
+
+^9::ToggleLayout(9)
 
 ^0::ToggleLayout(0)
 
@@ -72,6 +86,36 @@ l::Send, {`]}
 ,::Send, {`{}
 .::Send, {`}}
 
+#if ToggleMouseLayout
+; Right Hand Mouse
+w::MouseMove, 0, -10, .5, R
+a::MouseMove, -10, 0, .5, R
+s::MouseMove, 0, 10, .5, R
+d::MouseMove, 10, 0, .5, R
+q::RButton
+e::LButton
+x::MButton
+
++w::MouseMove, 0, -100, .5, R
++a::MouseMove, -100, 0, .5, R
++s::MouseMove, 0, 100, .5, R
++d::MouseMove, 100, 0, .5, R
+
+; Left Hand Mouse
+i::MouseMove, 0, -10, .5, R
+j::MouseMove, -10, 0, .5, R
+k::MouseMove, 0, 10, .5, R
+l::MouseMove, 10, 0, .5, R
+u::LButton
+o::RButton
+,::MButton
+
++i::MouseMove, 0, -100, .5, R
++j::MouseMove, -100, 0, .5, R
++k::MouseMove, 0, 100, .5, R
++l::MouseMove, 100, 0, .5, R
+
+
 #if ToggleCGxLayout
 ; Top Row
 q::w
@@ -85,15 +129,15 @@ i::i
 o::u
 p::v
 [::'
-;]::
+]::=
 
 ; Home Row
 a::s
 s::n
 d::t
 f::d
-g::,
-h::.
+g::.
+h::,
 j::a
 k::e
 l::o
