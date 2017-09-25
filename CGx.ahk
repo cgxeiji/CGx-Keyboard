@@ -86,6 +86,13 @@ l::Send, {`]}
 ,::Send, {`{}
 .::Send, {`}}
 
+j::Send, {+}
+`;::Send, {-}
+u::Send, {*}
+p::Send, {^}
+/::Send, {/}
+m::Send, {`%}
+
 #if ToggleMouseLayout
 ; Right Hand Mouse
 +e::MouseMove, 0, -100, .5, R
@@ -136,8 +143,8 @@ a::s
 s::n
 d::t
 f::d
-g::.
-h::,
+g::,
+h::.
 j::a
 k::e
 l::o
@@ -155,6 +162,10 @@ m::m
 ,::f
 .::b
 /::g
+
+; General Commands
+-::^c
+=::^v
 
 ; Numbers
 1 & m::Send, {1}
@@ -176,6 +187,13 @@ m::m
 2 & l::Send, {`]}
 2 & ,::Send, {`{}
 2 & .::Send, {`}}
+
+2 & j::Send, {+}
+2 & `;::Send, {-}
+2 & u::Send, {*}
+2 & p::Send, {^}
+2 & /::Send, {/}
+2 & m::Send, {`%}
 
 ; Mouse
 ; Right Hand Mouse
