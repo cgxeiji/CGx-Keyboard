@@ -11,50 +11,50 @@ ToggleSymLayout := False
 ToggleMouseLayout := False
 
 TurnOfLayouts() {
-    global
-    ToggleCGxLayout := False
-    ToggleNumLayout := False
-    ToggleSymLayout := False
-    ToggleMouseLayout := False
+	global
+	ToggleCGxLayout := False
+	ToggleNumLayout := False
+	ToggleSymLayout := False
+	ToggleMouseLayout := False
 }
 
 ToggleLayout(x) {
-    global
-    If (x = 0) {
-        ToggleCGxLayout := !ToggleCGxLayout
-        If (ToggleCGxLayout = True) {
-            TurnOfLayouts()
-            ToggleCGxLayout := True
-        } Else {
-            TurnOfLayouts()
-        }
-    } Else If (x = 1) {
-        If (ToggleNumLayout = False) {
-            TurnOfLayouts()
-            ToggleNumLayout := True
-        } Else {
-            TurnOfLayouts()
-            ToggleCGxLayout := True
-        }
-    } Else If (x = 2) {
-        If (ToggleSymLayout = False) {
-            TurnOfLayouts()
-            ToggleSymLayout := True
-        } Else {
-            TurnOfLayouts()
-            ToggleCGxLayout := True
-        }
-    } Else If (x = 9) {
-        If (ToggleMouseLayout = False) {
-            TurnOfLayouts()
-            ToggleMouseLayout := True
-        } Else {
-            TurnOfLayouts()
-            ToggleCGxLayout := True
-        }
-    }
+	global
+	If (x = 0) {
+		ToggleCGxLayout := !ToggleCGxLayout
+		If (ToggleCGxLayout = True) {
+			TurnOfLayouts()
+			ToggleCGxLayout := True
+		} Else {
+			TurnOfLayouts()
+		}
+	} Else If (x = 1) {
+		If (ToggleNumLayout = False) {
+			TurnOfLayouts()
+			ToggleNumLayout := True
+		} Else {
+			TurnOfLayouts()
+			ToggleCGxLayout := True
+		}
+	} Else If (x = 2) {
+		If (ToggleSymLayout = False) {
+			TurnOfLayouts()
+			ToggleSymLayout := True
+		} Else {
+			TurnOfLayouts()
+			ToggleCGxLayout := True
+		}
+	} Else If (x = 9) {
+		If (ToggleMouseLayout = False) {
+			TurnOfLayouts()
+			ToggleMouseLayout := True
+		} Else {
+			TurnOfLayouts()
+			ToggleCGxLayout := True
+		}
+	}
 
-    Return
+	Return
 }
 
 ^1::ToggleLayout(1)
@@ -179,10 +179,10 @@ m::m
 
 ; Mouse
 ; Right Hand Mouse
-    ;9 & w::MouseMove, 0, -10, .5, R
-    ;9 & a::MouseMove, -10, 0, .5, R
-    ;9 & s::MouseMove, 0, 10, .5, R
-    ;9 & d::MouseMove, 10, 0, .5, R
+	;9 & w::MouseMove, 0, -10, .5, R
+	;9 & a::MouseMove, -10, 0, .5, R
+	;9 & s::MouseMove, 0, 10, .5, R
+	;9 & d::MouseMove, 10, 0, .5, R
 9 & e::Send, {Up}
 9 & s::Send, {Left}
 9 & d::Send, {Down}
