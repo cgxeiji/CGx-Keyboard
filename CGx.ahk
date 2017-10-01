@@ -1,10 +1,10 @@
 ; Toggle CGx Layout with altL + altR
 ToggleCGxLayout := True
 
-; Toggle Numeric Layout with '1'
+; Toggle Numeric Layout with '2'
 ToggleNumLayout := False
 
-; Toggle Symbolic Layout with '2'
+; Toggle Symbolic Layout with '3'
 ToggleSymLayout := False
 
 ; Toggle Mouse Layout with '9'
@@ -28,7 +28,7 @@ ToggleLayout(x) {
 		} Else {
 			TurnOfLayouts()
 		}
-	} Else If (x = 1) {
+	} Else If (x = 2) {
 		If (ToggleNumLayout = False) {
 			TurnOfLayouts()
 			ToggleNumLayout := True
@@ -36,7 +36,7 @@ ToggleLayout(x) {
 			TurnOfLayouts()
 			ToggleCGxLayout := True
 		}
-	} Else If (x = 2) {
+	} Else If (x = 3) {
 		If (ToggleSymLayout = False) {
 			TurnOfLayouts()
 			ToggleSymLayout := True
@@ -57,9 +57,9 @@ ToggleLayout(x) {
 	Return
 }
 
-^1::ToggleLayout(1)
-
 ^2::ToggleLayout(2)
+
+^3::ToggleLayout(3)
 
 ^9::ToggleLayout(9)
 
@@ -168,32 +168,32 @@ m::m
 =::^v
 
 ; Numbers
-1 & m::Send, {1}
-1 & ,::Send, {2}
-1 & .::Send, {3}
-1 & j::Send, {4}
-1 & k::Send, {5}
-1 & l::Send, {6}
-1 & u::Send, {7}
-1 & i::Send, {8}
-1 & o::Send, {9}
-1 & /::Send, {0}
-1 & `;::Send, {.}
+2 & m::Send, {1}
+2 & ,::Send, {2}
+2 & .::Send, {3}
+2 & j::Send, {4}
+2 & k::Send, {5}
+2 & l::Send, {6}
+2 & u::Send, {7}
+2 & i::Send, {8}
+2 & o::Send, {9}
+2 & /::Send, {0}
+2 & `;::Send, {.}
 
 ; Symbols
-2 & i::Send, {`(}
-2 & o::Send, {`)}
-2 & k::Send, {`[}
-2 & l::Send, {`]}
-2 & ,::Send, {`{}
-2 & .::Send, {`}}
+3 & i::Send, {`(}
+3 & o::Send, {`)}
+3 & k::Send, {`[}
+3 & l::Send, {`]}
+3 & ,::Send, {`{}
+3 & .::Send, {`}}
 
-2 & j::Send, {+}
-2 & `;::Send, {-}
-2 & u::Send, {*}
-2 & p::Send, {^}
-2 & /::Send, {/}
-2 & m::Send, {`%}
+3 & j::Send, {+}
+3 & `;::Send, {-}
+3 & u::Send, {*}
+3 & p::Send, {^}
+3 & /::Send, {/}
+3 & m::Send, {`%}
 
 ; Mouse
 ; Right Hand Mouse
