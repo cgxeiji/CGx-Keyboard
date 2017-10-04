@@ -77,6 +77,7 @@ i::Send, {8}
 o::Send, {9}
 /::Send, {0}
 `;::Send, {.}
+p::Send, {,}
 
 #if ToggleSymLayout
 i::Send, {`(}
@@ -179,6 +180,7 @@ m::m
 2 & o::Send, {9}
 2 & /::Send, {0}
 2 & `;::Send, {.}
+2 & p::Send, {,}
 
 ; Symbols
 3 & i::Send, {`(}
