@@ -1,3 +1,13 @@
+CheckIcon() {
+	global
+	If (ToggleCGxLayout = True) {
+		Menu, Tray, Icon, on.ico, , 1
+	} Else {
+		Menu, Tray, Icon, off.ico, , 1
+	}
+	Return
+}
+
 ; LED Control
 
 Indicator(num) {
@@ -101,6 +111,8 @@ ToggleSymLayout := False
 ; Toggle Mouse Layout with '9'
 ToggleMouseLayout := False
 
+CheckIcon()
+
 TurnOfLayouts() {
 	global
 	ToggleCGxLayout := False
@@ -144,6 +156,8 @@ ToggleLayout(x) {
 			ToggleCGxLayout := True
 		}
 	}
+
+	CheckIcon()
 
 	Return
 }
