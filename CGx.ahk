@@ -288,6 +288,19 @@ m::m
 3 & /::Send, {/}
 3 & m::Send, {`%}
 
+; More Symbols
+0 & a::Send, {!}
+0 & e::Send, {?}
+0 & x::Send, {@}
+0 & c::Send, {#}
+0 & v::Send, {$}
+0 & z::Send, {`%}
+0 & r::Send, {^}
+0 & w::Send, {&}
+0 & f::Send, {=}
+0 & s::Send, {<}
+0 & d::Send, {>}
+
 ; Mouse
 ; Right Hand Mouse
 	;9 & w::MouseMove, 0, -10, .5, R
