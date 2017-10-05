@@ -154,7 +154,7 @@ ToggleLayout(x) {
 
 ^9::ToggleLayout(9)
 
-^\::ToggleLayout(0)
+\::ToggleLayout(0)
 
 #if ToggleNumLayout
 m::Send, {1}
