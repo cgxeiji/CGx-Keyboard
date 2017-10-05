@@ -99,7 +99,7 @@ SetUnicodeStr(ByRef out, str_)
   StrPut(str_,&out,"utf-16")
 }
 
-; Toggle CGx Layout with altL + altR
+; Toggle CGx Layout with \
 ToggleCGxLayout := True
 
 ; Toggle Numeric Layout with '2'
