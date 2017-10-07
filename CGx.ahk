@@ -235,8 +235,10 @@ q::w
 w::l
 e::r
 r::j
-t::;
-y::/
+t::-
++t::_
+y::!
++y::?
 u::k
 i::i
 o::u
@@ -250,7 +252,9 @@ s::n
 d::t
 f::d
 g::,
++g::&
 h::.
++h::*
 j::a
 k::e
 l::o
@@ -270,52 +274,80 @@ m::m
 /::g
 
 ; General Commands
--::^c
-=::^v
+^x::^x
+^c::^c
+^v::^v
+
+^z::^z
+
+^a::^a
+^s::^s
+
+^q::^q
+^w::^w
+
+^/::^!n
 
 ; Numbers
-2 & m::Send, {1}
-2 & ,::Send, {2}
-2 & .::Send, {3}
-2 & j::Send, {4}
-2 & k::Send, {5}
-2 & l::Send, {6}
+2 & y::Send, {}
 2 & u::Send, {7}
 2 & i::Send, {8}
 2 & o::Send, {9}
-2 & /::Send, {0}
-2 & `;::Send, {.}
 2 & p::Send, {,}
+2 & [::Send, {}
+
+2 & h::Send, {=}
+2 & j::Send, {4}
+2 & k::Send, {5}
+2 & l::Send, {6}
+2 & `;::Send, {.}
+2 & '::Send, {}
+
+2 & n::Send, {}
+2 & m::Send, {1}
+2 & ,::Send, {2}
+2 & .::Send, {3}
+2 & /::Send, {0}
 
 ; Symbols
+3 & y::Send, {}
+3 & u::Send, {*}
 3 & i::Send, {`(}
 3 & o::Send, {`)}
+3 & p::Send, {^}
+3 & [::Send, {&}
+
+3 & h::Send, {}
+3 & j::Send, {+}
 3 & k::Send, {`[}
 3 & l::Send, {`]}
+3 & `;::Send, {-}
+3 & '::Send, {#}
+
+3 & n::Send, {}
+3 & m::Send, {`%}
 3 & ,::Send, {`{}
 3 & .::Send, {`}}
-
-3 & j::Send, {+}
-3 & `;::Send, {-}
-3 & u::Send, {*}
-3 & p::Send, {^}
 3 & /::Send, {/}
-3 & m::Send, {`%}
 
 ; More Symbols
+0 & q::Send, {``}
+0 & w::Send, {~}
+0 & e::Send, {-}
+0 & r::Send, {|}
+0 & t::Send, {^}
+
 0 & a::Send, {!}
-0 & w::Send, {?}
-0 & x::Send, {@}
-0 & c::Send, {#}
-0 & v::Send, {$}
-0 & z::Send, {`%}
-0 & g::Send, {^}
-0 & e::Send, {&}
-0 & f::Send, {=}
 0 & s::Send, {<}
 0 & d::Send, {>}
-0 & q::Send, {\}
-0 & r::Send, {|}
+0 & f::Send, {=}
+0 & g::Send, {}
+
+0 & z::Send, {\}
+0 & x::Send, {$}
+0 & c::Send, {&}
+0 & v::Send, {#}
+0 & b::Send, {}
 
 ; Mouse
 ; Right Hand Mouse
