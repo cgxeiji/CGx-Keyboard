@@ -341,7 +341,7 @@ m::m
 0 & s::Send, {<}
 0 & d::Send, {>}
 0 & f::Send, {=}
-0 & g::Send, {}
+0 & g::Send, {`@}
 
 0 & z::Send, {\}
 0 & x::Send, {$}
