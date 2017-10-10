@@ -349,6 +349,28 @@ m::m
 0 & v::Send, {#}
 0 & b::Send, {}
 
+;;
+
+0 & y::SendInput, ({U+256F}{U+00B0}{U+25A1}{U+00B0}{U+FF09}{U+256F}{U+FE35} {U+253B}{U+2501}{U+253B} ; Flip Table
+0 & u::SendInput, {U+0CA0}_{U+0CA0} ; Look of disaproval
+0 & i::SendInput, {U+0CA5}_{U+0CA5} ; Crying
+0 & o::Send, {}
+0 & p::Send, {}
+0 & [::Send, {}
+
+0 & h::Send, {}
+0 & j::SendInput, {U+00AF}{U+005C}{U+005F}{U+0028}{U+30C4}{U+0029}{U+005F}{U+002F}{U+00AF} ; Shrug
+0 & k::SendInput, ( {U+0361}{U+00B0} {U+035C}{U+0296} {U+0361}{U+00B0}) ; Lenny Face
+0 & l::Send, {}
+0 & `;::Send, {}
+0 & '::Send, {}
+
+0 & n::Send, {}
+0 & m::Send, {}
+0 & ,::Send, {}
+0 & .::Send, {}
+0 & /::Send, {}
+
 ; Mouse
 ; Right Hand Mouse
 	;9 & w::MouseMove, 0, -10, .5, R
