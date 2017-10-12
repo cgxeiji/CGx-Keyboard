@@ -273,6 +273,11 @@ m::m
 .::b
 /::g
 
+; Special Keys
+SC0079::SPACE
+SC0073::Shift
+SC0039::Enter
+
 ; General Commands
 ^x::^x
 ^c::^c
@@ -308,6 +313,26 @@ m::m
 2 & ,::Send, {2}
 2 & .::Send, {3}
 2 & /::Send, {0}
+
+SC007B & y::Send, {}
+SC007B & u::Send, {7}
+SC007B & i::Send, {8}
+SC007B & o::Send, {9}
+SC007B & p::Send, {,}
+SC007B & [::Send, {}
+
+SC007B & h::Send, {=}
+SC007B & j::Send, {4}
+SC007B & k::Send, {5}
+SC007B & l::Send, {6}
+SC007B & `;::Send, {.}
+SC007B & '::Send, {}
+
+SC007B & n::Send, {}
+SC007B & m::Send, {1}
+SC007B & ,::Send, {2}
+SC007B & .::Send, {3}
+SC007B & /::Send, {0}
 
 ; Symbols
 3 & y::Send, {}
