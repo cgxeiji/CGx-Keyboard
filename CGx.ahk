@@ -335,15 +335,15 @@ m::m
 0 & w::Send, {~}
 0 & e::Send, {-}
 0 & r::Send, {|}
-0 & t::Send, {^}
+0 & t::Send, {\}
 
 0 & a::Send, {!}
 0 & s::Send, {<}
 0 & d::Send, {>}
 0 & f::Send, {=}
-0 & g::Send, {`@}
+0 & g::Send, {^}
 
-0 & z::Send, {\}
+0 & z::Send, {`@}
 0 & x::Send, {$}
 0 & c::Send, {&}
 0 & v::Send, {#}
