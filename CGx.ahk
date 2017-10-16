@@ -275,10 +275,18 @@ $Space::
 return
 
 ~RControl::
-	ToolTip, Numbers Map
+	ToolTip, Brackets Map
 return
 
 ~RControl Up::
+	ToolTip
+return
+
+~LAlt::
+	ToolTip, Brackets Map
+return
+
+~LAlt Up::
 	ToolTip
 return
 
@@ -390,6 +398,28 @@ m::m
 ~RControl & .::Send, {`}}
 ~RControl & /::Send, {/}
 
+;;;
+
+~LAlt & y::Send, {}
+~LAlt & u::Send, {*}
+~LAlt & i::Send, {`(}
+~LAlt & o::Send, {`)}
+~LAlt & p::Send, {^}
+~LAlt & [::Send, {&}
+
+~LAlt & h::Send, {}
+~LAlt & j::Send, {+}
+~LAlt & k::Send, {`[}
+~LAlt & l::Send, {`]}
+~LAlt & `;::Send, {-}
+~LAlt & '::Send, {#}
+
+~LAlt & n::Send, {}
+~LAlt & m::Send, {`%}
+~LAlt & ,::Send, {`{}
+~LAlt & .::Send, {`}}
+~LAlt & /::Send, {/}
+
 ; More Symbols
 ~Space & q::Send, {``}
 ~Space & w::Send, {~}
@@ -428,6 +458,26 @@ m::m
 ~RControl & c::Send, {}
 ~RControl & v::Send, {}
 ~RControl & b::Send, {}
+
+;;;
+
+~LAlt & q::Send, {}
+~LAlt & w::Send, {U+0CA5}_{U+0CA5} ; Crying
+~LAlt & e::Send, ({U+256F}{U+00B0}{U+25A1}{U+00B0}) {U+256F}{U+FE35} {U+253B}{U+2501}{U+253B} ; Flip Table
+~LAlt & r::Send, {}
+~LAlt & t::Send, {}
+
+~LAlt & a::Send, {}
+~LAlt & s::Send, {U+0CA0}_{U+0CA0} ; Look of disaproval
+~LAlt & d::Send, ( {U+0361}{U+00B0} {U+035C}{U+0296} {U+0361}{U+00B0}) ; Lenny Face
+~LAlt & f::Send, {U+00AF}{U+005C}{U+005F}{U+0028}{U+30C4}{U+0029}{U+005F}{U+002F}{U+00AF} ; Shrug
+~LAlt & g::Send, {}
+
+~LAlt & z::Send, {}
+~LAlt & x::Send, {}
+~LAlt & c::Send, {}
+~LAlt & v::Send, {}
+~LAlt & b::Send, {}
 
 ; Direction
 ; Left Hand
