@@ -170,6 +170,19 @@ ToggleLayout(x) {
 
 ^\::ToggleLayout(0)
 
+$Space::
+	KeyWait, Space, T0.5
+	
+	if (ErrorLevel)
+		ToolTip, Space
+	else {
+		Send, {Space}
+	}
+
+	KeyWait, Space
+	ToolTip
+return
+
 #if ToggleNumLayout
 m::Send, {1}
 ,::Send, {2}
