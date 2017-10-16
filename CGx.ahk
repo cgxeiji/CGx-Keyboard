@@ -303,7 +303,7 @@ m::m
 2 & `;::Send, {.}
 2 & '::Send, {}
 
-2 & n::Send, {}
+2 & n::Send, {$}
 2 & m::Send, {1}
 2 & ,::Send, {2}
 2 & .::Send, {3}
@@ -351,7 +351,7 @@ m::m
 
 ;;
 
-0 & y::SendInput, ({U+256F}{U+00B0}{U+25A1}{U+00B0}{U+FF09}{U+256F}{U+FE35} {U+253B}{U+2501}{U+253B} ; Flip Table
+0 & y::SendInput, ({U+256F}{U+00B0}{U+25A1}{U+00B0}) {U+256F}{U+FE35} {U+253B}{U+2501}{U+253B} ; Flip Table
 0 & u::SendInput, {U+0CA0}_{U+0CA0} ; Look of disaproval
 0 & i::SendInput, {U+0CA5}_{U+0CA5} ; Crying
 0 & o::Send, {}
