@@ -170,19 +170,6 @@ ToggleLayout(x) {
 
 ^\::ToggleLayout(0)
 
-$Space::
-	KeyWait, Space, T0.5
-	
-	if (ErrorLevel)
-		ToolTip, Space
-	else {
-		Send, {Space}
-	}
-
-	KeyWait, Space
-	ToolTip
-return
-
 #if ToggleNumLayout
 m::Send, {1}
 ,::Send, {2}
@@ -243,6 +230,22 @@ o::RButton
 
 
 #if ToggleCGxLayout
+
+; Spacebar Toggle
+$Space::
+	KeyWait, Space, T0.2
+	
+	if (ErrorLevel)
+		ToolTip, Symbols Map
+	else {
+		Send, {Space}
+	}
+
+	KeyWait, Space
+	ToolTip
+return
+
+
 ; Top Row
 q::w
 w::l
@@ -323,44 +326,44 @@ m::m
 2 & /::Send, {0}
 
 ; Symbols
-3 & y::Send, {}
-3 & u::Send, {*}
-3 & i::Send, {`(}
-3 & o::Send, {`)}
-3 & p::Send, {^}
-3 & [::Send, {&}
+~Space & y::Send, {}
+~Space & u::Send, {*}
+~Space & i::Send, {`(}
+~Space & o::Send, {`)}
+~Space & p::Send, {^}
+~Space & [::Send, {&}
 
-3 & h::Send, {}
-3 & j::Send, {+}
-3 & k::Send, {`[}
-3 & l::Send, {`]}
-3 & `;::Send, {-}
-3 & '::Send, {#}
+~Space & h::Send, {}
+~Space & j::Send, {+}
+~Space & k::Send, {`[}
+~Space & l::Send, {`]}
+~Space & `;::Send, {-}
+~Space & '::Send, {#}
 
-3 & n::Send, {}
-3 & m::Send, {`%}
-3 & ,::Send, {`{}
-3 & .::Send, {`}}
-3 & /::Send, {/}
+~Space & n::Send, {}
+~Space & m::Send, {`%}
+~Space & ,::Send, {`{}
+~Space & .::Send, {`}}
+~Space & /::Send, {/}
 
 ; More Symbols
-0 & q::Send, {``}
-0 & w::Send, {~}
-0 & e::Send, {-}
-0 & r::Send, {|}
-0 & t::Send, {\}
+~Space & q::Send, {``}
+~Space & w::Send, {~}
+~Space & e::Send, {-}
+~Space & r::Send, {|}
+~Space & t::Send, {\}
 
-0 & a::Send, {!}
-0 & s::Send, {<}
-0 & d::Send, {>}
-0 & f::Send, {=}
-0 & g::Send, {^}
+~Space & a::Send, {!}
+~Space & s::Send, {<}
+~Space & d::Send, {>}
+~Space & f::Send, {=}
+~Space & g::Send, {^}
 
-0 & z::Send, {`@}
-0 & x::Send, {$}
-0 & c::Send, {&}
-0 & v::Send, {#}
-0 & b::Send, {}
+~Space & z::Send, {`@}
+~Space & x::Send, {$}
+~Space & c::Send, {&}
+~Space & v::Send, {#}
+~Space & b::Send, {}
 
 ;;
 
