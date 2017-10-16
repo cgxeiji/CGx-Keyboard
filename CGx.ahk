@@ -235,9 +235,9 @@ o::RButton
 $Space::
 	KeyWait, Space, T0.2
 	
-	if (ErrorLevel)
+	if (ErrorLevel) {
 		ToolTip, Symbols Map
-	else {
+	} else {
 		Send, {Space}
 	}
 
@@ -245,6 +245,21 @@ $Space::
 	ToolTip
 return
 
+~RControl::
+	ToolTip, Numbers Map
+return
+
+~RControl Up::
+	ToolTip
+return
+
+~RAlt::
+	ToolTip, Mouse & Direction Map
+return
+
+~RAlt Up::
+	ToolTip
+return
 
 ; Top Row
 q::w
@@ -305,46 +320,46 @@ m::m
 ^/::^!n
 
 ; Numbers
-2 & y::Send, {}
-2 & u::Send, {7}
-2 & i::Send, {8}
-2 & o::Send, {9}
-2 & p::Send, {,}
-2 & [::Send, {}
+~Space & y::Send, {}
+~Space & u::Send, {7}
+~Space & i::Send, {8}
+~Space & o::Send, {9}
+~Space & p::Send, {,}
+~Space & [::Send, {}
 
-2 & h::Send, {=}
-2 & j::Send, {4}
-2 & k::Send, {5}
-2 & l::Send, {6}
-2 & `;::Send, {.}
-2 & '::Send, {}
+~Space & h::Send, {=}
+~Space & j::Send, {4}
+~Space & k::Send, {5}
+~Space & l::Send, {6}
+~Space & `;::Send, {.}
+~Space & '::Send, {}
 
-2 & n::Send, {$}
-2 & m::Send, {1}
-2 & ,::Send, {2}
-2 & .::Send, {3}
-2 & /::Send, {0}
+~Space & n::Send, {$}
+~Space & m::Send, {1}
+~Space & ,::Send, {2}
+~Space & .::Send, {3}
+~Space & /::Send, {0}
 
 ; Symbols
-~Space & y::Send, {}
-~Space & u::Send, {*}
-~Space & i::Send, {`(}
-~Space & o::Send, {`)}
-~Space & p::Send, {^}
-~Space & [::Send, {&}
+~RControl & y::Send, {}
+~RControl & u::Send, {*}
+~RControl & i::Send, {`(}
+~RControl & o::Send, {`)}
+~RControl & p::Send, {^}
+~RControl & [::Send, {&}
 
-~Space & h::Send, {}
-~Space & j::Send, {+}
-~Space & k::Send, {`[}
-~Space & l::Send, {`]}
-~Space & `;::Send, {-}
-~Space & '::Send, {#}
+~RControl & h::Send, {}
+~RControl & j::Send, {+}
+~RControl & k::Send, {`[}
+~RControl & l::Send, {`]}
+~RControl & `;::Send, {-}
+~RControl & '::Send, {#}
 
-~Space & n::Send, {}
-~Space & m::Send, {`%}
-~Space & ,::Send, {`{}
-~Space & .::Send, {`}}
-~Space & /::Send, {/}
+~RControl & n::Send, {}
+~RControl & m::Send, {`%}
+~RControl & ,::Send, {`{}
+~RControl & .::Send, {`}}
+~RControl & /::Send, {/}
 
 ; More Symbols
 ~Space & q::Send, {``}
@@ -367,45 +382,62 @@ m::m
 
 ;;
 
-0 & y::SendInput, ({U+256F}{U+00B0}{U+25A1}{U+00B0}) {U+256F}{U+FE35} {U+253B}{U+2501}{U+253B} ; Flip Table
-0 & u::SendInput, {U+0CA0}_{U+0CA0} ; Look of disaproval
-0 & i::SendInput, {U+0CA5}_{U+0CA5} ; Crying
-0 & o::Send, {}
-0 & p::Send, {}
-0 & [::Send, {}
+~RControl & q::Send, {}
+~RControl & w::Send, {U+0CA5}_{U+0CA5} ; Crying
+~RControl & e::Send, ({U+256F}{U+00B0}{U+25A1}{U+00B0}) {U+256F}{U+FE35} {U+253B}{U+2501}{U+253B} ; Flip Table
+~RControl & r::Send, {}
+~RControl & t::Send, {}
 
-0 & h::Send, {}
-0 & j::SendInput, {U+00AF}{U+005C}{U+005F}{U+0028}{U+30C4}{U+0029}{U+005F}{U+002F}{U+00AF} ; Shrug
-0 & k::SendInput, ( {U+0361}{U+00B0} {U+035C}{U+0296} {U+0361}{U+00B0}) ; Lenny Face
-0 & l::Send, {}
-0 & `;::Send, {}
-0 & '::Send, {}
+~RControl & a::Send, {}
+~RControl & s::Send, {U+0CA0}_{U+0CA0} ; Look of disaproval
+~RControl & d::Send, ( {U+0361}{U+00B0} {U+035C}{U+0296} {U+0361}{U+00B0}) ; Lenny Face
+~RControl & f::Send, {U+00AF}{U+005C}{U+005F}{U+0028}{U+30C4}{U+0029}{U+005F}{U+002F}{U+00AF} ; Shrug
+~RControl & g::Send, {}
 
-0 & n::Send, {}
-0 & m::Send, {}
-0 & ,::Send, {}
-0 & .::Send, {}
-0 & /::Send, {}
+~RControl & z::Send, {}
+~RControl & x::Send, {}
+~RControl & c::Send, {}
+~RControl & v::Send, {}
+~RControl & b::Send, {}
 
-; Mouse
-; Right Hand Mouse
-	;9 & w::MouseMove, 0, -10, .5, R
-	;9 & a::MouseMove, -10, 0, .5, R
-	;9 & s::MouseMove, 0, 10, .5, R
-	;9 & d::MouseMove, 10, 0, .5, R
-9 & e::Send, {Up}
-9 & s::Send, {Left}
-9 & d::Send, {Down}
-9 & f::Send, {Right}
-9 & w::Send, {RButton}
-9 & r::Send, {LButton}
-9 & c::Send, {MButton}
+; Direction
+; Left Hand
+~RAlt & q::Send, {Top}
+~RAlt & w::Send, {Home}
+~RAlt & e::Send, {Up}
+~RAlt & r::Send, {End}
+~RAlt & t::Send, {}
 
-; Left Hand Mouse
-9 & i::MouseMove, 0, -10, .5, R
-9 & j::MouseMove, -10, 0, .5, R
-9 & k::MouseMove, 0, 10, .5, R
-9 & l::MouseMove, 10, 0, .5, R
-9 & u::Send, {LButton}
-9 & o::Send, {RButton}
-9 & ,::Send, {MButton}
+~RAlt & a::Send, {Bottom}
+~RAlt & s::Send, {Left}
+~RAlt & d::Send, {Down}
+~RAlt & f::Send, {Right}
+~RAlt & g::Send, {}
+
+~RAlt & z::Send, {}
+~RAlt & x::Send, {}
+~RAlt & c::Send, {}
+~RAlt & v::Send, {}
+~RAlt & b::Send, {}
+
+; Right Hand
+
+~RAlt & y::Send, {}
+~RAlt & u::Send, {LButton}
+~RAlt & i::MouseMove, 0, -10, .5, R
+~RAlt & o::Send, {RButton}
+~RAlt & p::Send, {}
+~RAlt & [::Send, {}
+
+~RAlt & h::Send, {}
+~RAlt & j::MouseMove, -10, 0, .5, R
+~RAlt & k::MouseMove, 0, 10, .5, R
+~RAlt & l::MouseMove, 10, 0, .5, R
+~RAlt & `;::Send, {}
+~RAlt & '::Send, {}
+
+~RAlt & n::Send, {}
+~RAlt & m::Send, {}
+~RAlt & ,::Send, {MButton}
+~RAlt & .::Send, {}
+~RAlt & /::Send, {}
