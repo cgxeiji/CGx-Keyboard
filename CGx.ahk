@@ -176,6 +176,29 @@ Return
 
 CapsLock::BackSpace
 
+~LShift::
+	KeyWait, LShift, T0.1
+	
+	if (ErrorLevel) {
+
+	} else {
+		if GetKeyState("CapsLock", "T") = 1 {
+			SetCapsLockState, Off
+			SplashTextOn,,,Lowercase
+			Sleep, 500
+			SplashTextOff
+		} else if GetKeyState("CapsLock", "T") = 0 {
+			SetCapsLockState, On
+			SplashTextOn,,,CapsLock
+			Sleep, 500
+			SplashTextOff
+		}
+	}
+
+	KeyWait, LShift
+	ToolTip
+return
+
 #if ToggleNumLayout
 m::Send, {1}
 ,::Send, {2}
