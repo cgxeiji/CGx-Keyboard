@@ -170,6 +170,12 @@ ToggleLayout(x) {
 
 ^\::ToggleLayout(0)
 
+$Backspace::
+	Send, {Delete}
+Return
+
+CapsLock::BackSpace
+
 #if ToggleNumLayout
 m::Send, {1}
 ,::Send, {2}
@@ -402,7 +408,7 @@ m::m
 
 ; Direction
 ; Left Hand
-~RAlt & q::Send, {Top}
+~RAlt & q::Send, {Up}
 ~RAlt & w::Send, {Home}
 ~RAlt & e::Send, {Up}
 ~RAlt & r::Send, {End}
