@@ -177,21 +177,27 @@ Return
 CapsLock::BackSpace
 
 ~LShift::
-	KeyWait, LShift, T0.1
+	KeyWait, LShift, T0.05
 	
 	if (ErrorLevel) {
-
+		ToolTip
 	} else {
-		if GetKeyState("CapsLock", "T") = 1 {
-			SetCapsLockState, Off
-			SplashTextOn,,,Lowercase
-			Sleep, 500
-			SplashTextOff
-		} else if GetKeyState("CapsLock", "T") = 0 {
-			SetCapsLockState, On
-			SplashTextOn,,,CapsLock
-			Sleep, 500
-			SplashTextOff
+		KeyWait, LShift, T0.1
+	
+		if (ErrorLevel) {
+			ToolTip
+		} else {
+			if GetKeyState("CapsLock", "T") = 1 {
+				SetCapsLockState, Off
+				SplashTextOn,,,Lowercase
+				Sleep, 500
+				SplashTextOff
+			} else if GetKeyState("CapsLock", "T") = 0 {
+				SetCapsLockState, On
+				SplashTextOn,,,CapsLock
+				Sleep, 500
+				SplashTextOff
+			}
 		}
 	}
 
