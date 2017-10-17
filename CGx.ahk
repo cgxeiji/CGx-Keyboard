@@ -99,6 +99,39 @@ SetUnicodeStr(ByRef out, str_)
   StrPut(str_,&out,"utf-16")
 }
 
+MouseManager() {
+	global
+	if (Mouse_Speed < 7) {
+		Mouse_Speed += 0.5
+	}
+	ToolTip, Speed %Mouse_Speed%.
+	local speed := 2**Mouse_Speed
+	local x := 0
+	local y := 0
+
+	if (MMU = True) {
+		y -= 1
+	}
+	if (MMD = True) {
+		y += 1
+	}
+	if (MML = True) {
+		x -= 1
+	}
+	if (MMR = True) {
+		x += 1
+	}
+	
+	MouseMove, x*speed, y*speed, 0, R
+}
+
+MouseReset() {
+	global
+	if (MMU = False and MMD = False and MML = False and MMR = False) {
+		Mouse_Speed := 3
+	}
+}
+
 ; Toggle CGx Layout with \
 ToggleCGxLayout := True
 
@@ -110,6 +143,12 @@ ToggleSymLayout := False
 
 ; Toggle Mouse Layout with '9'
 ToggleMouseLayout := False
+
+MMU := False
+MMD := False
+MML := False
+MMR := False
+Mouse_Speed := 3
 
 CheckIcon()
 
@@ -509,15 +548,49 @@ m::m
 
 ~RAlt & y::Send, {}
 ~RAlt & u::Send, {LButton}
-~RAlt & i::MouseMove, 0, -10, .5, R
+
+~RAlt & i::
+	MMU := True
+	MouseManager()
+Return
+~RAlt & i Up::
+	MMU := False
+	MouseReset()
+Return
+
 ~RAlt & o::Send, {RButton}
 ~RAlt & p::Send, {}
 ~RAlt & [::Send, {}
 
 ~RAlt & h::Send, {}
-~RAlt & j::MouseMove, -10, 0, .5, R
-~RAlt & k::MouseMove, 0, 10, .5, R
-~RAlt & l::MouseMove, 10, 0, .5, R
+
+~RAlt & j::
+	MML := True
+	MouseManager()
+Return
+~RAlt & j Up::
+	MML := False
+	MouseReset()
+Return
+
+~RAlt & k::
+	MMD := True
+	MouseManager()
+Return
+~RAlt & k Up::
+	MMD := False
+	MouseReset()
+Return
+
+~RAlt & l::
+	MMR := True
+	MouseManager()
+Return
+~RAlt & l Up::
+	MMR := False
+	MouseReset()
+Return
+
 ~RAlt & `;::Send, {}
 ~RAlt & '::Send, {}
 
