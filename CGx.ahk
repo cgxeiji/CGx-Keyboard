@@ -420,8 +420,8 @@ m::m
 
 ~LAlt & y::Send, {}
 ~LAlt & u::Send, {*}
-~LAlt & i::Send, {`(}
-~LAlt & o::Send, {`)}
+~LAlt & i::SendInput, {(}
+~LAlt & o::SendInput, {)}
 ~LAlt & p::Send, {^}
 ~LAlt & [::Send, {&}
 
@@ -499,13 +499,13 @@ m::m
 
 ; Direction
 ; Left Hand
-~RAlt & q::Send, {Up}
+~RAlt & q::Send, {PgUp}
 ~RAlt & w::Send, {Home}
 ~RAlt & e::Send, {Up}
 ~RAlt & r::Send, {End}
 ~RAlt & t::Send, {}
 
-~RAlt & a::Send, {Bottom}
+~RAlt & a::Send, {PgDn}
 ~RAlt & s::Send, {Left}
 ~RAlt & d::Send, {Down}
 ~RAlt & f::Send, {Right}
