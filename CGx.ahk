@@ -280,16 +280,16 @@ o::RButton
 
 ; Spacebar Toggle
 $Space::
-	KeyWait, Space, T0.15
+	KeyWait, Space, T0.2
 	
 	if (ErrorLevel) {
 		ToolTip, Symbols Map
+		KeyWait, Space
+		ToolTip
 	} else {
 		Send, {Space}
 	}
-
-	KeyWait, Space
-	ToolTip
+	
 return
 
 3::
