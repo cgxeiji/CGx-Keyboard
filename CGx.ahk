@@ -280,7 +280,7 @@ o::RButton
 
 ; Spacebar Toggle
 $Space::
-	KeyWait, Space, T0.2
+	KeyWait, Space, T0.15
 	
 	if (ErrorLevel) {
 		ToolTip, Symbols Map
@@ -289,6 +289,19 @@ $Space::
 	}
 
 	KeyWait, Space
+	ToolTip
+return
+
+3::
+	KeyWait, 3, T0.1
+	
+	if (ErrorLevel) {
+		ToolTip, Brackets Map
+	} else {
+		Send, {}
+	}
+
+	KeyWait, 3
 	ToolTip
 return
 
@@ -375,68 +388,46 @@ m::m
 ^/::^!n
 
 ; Numbers
-~Space & y::Send, {}
+~Space & y::Send, {-}
 ~Space & u::Send, {7}
 ~Space & i::Send, {8}
 ~Space & o::Send, {9}
 ~Space & p::Send, {,}
-~Space & [::Send, {}
+~Space & [::Send, {`%}
 
-~Space & h::Send, {=}
+~Space & h::Send, {+}
 ~Space & j::Send, {4}
 ~Space & k::Send, {5}
 ~Space & l::Send, {6}
 ~Space & `;::Send, {.}
-~Space & '::Send, {}
+~Space & '::Send, {/}
 
-~Space & n::Send, {$}
+~Space & n::Send, {*}
 ~Space & m::Send, {1}
 ~Space & ,::Send, {2}
 ~Space & .::Send, {3}
 ~Space & /::Send, {0}
 
 ; Symbols
-~RControl & y::Send, {}
-~RControl & u::Send, {*}
-~RControl & i::Send, {`(}
-~RControl & o::Send, {`)}
-~RControl & p::Send, {^}
-~RControl & [::Send, {&}
+3 & y::Send, {}
+3 & u::Send, {}
+3 & i::Send, {`(}
+3 & o::Send, {`)}
+3 & p::Send, {}
+3 & [::Send, {}
 
-~RControl & h::Send, {}
-~RControl & j::Send, {+}
-~RControl & k::Send, {`[}
-~RControl & l::Send, {`]}
-~RControl & `;::Send, {-}
-~RControl & '::Send, {#}
+3 & h::Send, {}
+3 & j::Send, {}
+3 & k::Send, {`[}
+3 & l::Send, {`]}
+3 & `;::Send, {}
+3 & '::Send, {}
 
-~RControl & n::Send, {}
-~RControl & m::Send, {`%}
-~RControl & ,::Send, {`{}
-~RControl & .::Send, {`}}
-~RControl & /::Send, {/}
-
-;;;
-
-~LAlt & y::Send, {}
-~LAlt & u::Send, {*}
-~LAlt & i::SendInput, {(}
-~LAlt & o::SendInput, {)}
-~LAlt & p::Send, {^}
-~LAlt & [::Send, {&}
-
-~LAlt & h::Send, {}
-~LAlt & j::Send, {+}
-~LAlt & k::Send, {`[}
-~LAlt & l::Send, {`]}
-~LAlt & `;::Send, {-}
-~LAlt & '::Send, {#}
-
-~LAlt & n::Send, {}
-~LAlt & m::Send, {`%}
-~LAlt & ,::Send, {`{}
-~LAlt & .::Send, {`}}
-~LAlt & /::Send, {/}
+3 & n::Send, {}
+3 & m::Send, {}
+3 & ,::Send, {`{}
+3 & .::Send, {`}}
+3 & /::Send, {}
 
 ; More Symbols
 ~Space & q::Send, {``}
@@ -455,7 +446,7 @@ m::m
 ~Space & x::Send, {$}
 ~Space & c::Send, {&}
 ~Space & v::Send, {#}
-~Space & b::Send, {}
+~Space & b::Send, {`%}
 
 ;;
 
