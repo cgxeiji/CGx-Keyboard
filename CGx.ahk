@@ -170,6 +170,14 @@ ToggleLayout(x) {
 
 ^\::ToggleLayout(0)
 
+$Backspace::
+	Send, {Delete}
+Return
+
+CapsLock::BackSpace
+
+<!CapsLock::CapsLock
+
 #if ToggleNumLayout
 m::Send, {1}
 ,::Send, {2}
