@@ -240,7 +240,7 @@ o::RButton
 #if ToggleCGxLayout
 ; Top Row
 q::w
-w::l
+w::g
 e::r
 r::j
 t::-
@@ -279,7 +279,7 @@ n::x
 m::m
 ,::f
 .::b
-/::g
+/::l
 
 ; General Commands
 ^x::^x
