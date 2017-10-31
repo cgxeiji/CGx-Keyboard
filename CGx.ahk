@@ -249,7 +249,7 @@ o::RButton
 
 ; Top Row
 q::w
-w::g
+w::l
 e::r
 r::j
 t::-
@@ -279,7 +279,7 @@ l::o
 '::;
 
 ; Bottom Row
-z::z
+z::g
 x::p
 c::c
 v::y
@@ -288,7 +288,7 @@ n::x
 m::m
 ,::f
 .::b
-/::l
+/::z
 
 ; General Commands
 ^x::^x
