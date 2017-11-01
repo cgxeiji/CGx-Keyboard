@@ -101,8 +101,8 @@ SetUnicodeStr(ByRef out, str_)
 
 MouseManager() {
 	global
-	if (Mouse_Speed < 7) {
-		Mouse_Speed += 0.5
+	if (Mouse_Speed < 6) {
+		Mouse_Speed += 2
 	}
 	local speed := 2**Mouse_Speed
 	local x := 0
@@ -127,7 +127,7 @@ MouseManager() {
 MouseReset() {
 	global
 	if (MMU = False and MMD = False and MML = False and MMR = False) {
-		Mouse_Speed := 3
+		Mouse_Speed := 2
 	}
 }
 
