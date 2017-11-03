@@ -344,21 +344,21 @@ m::m
 ^/::^!n
 
 ; Numbers
-2 & y::Send, {}
+2 & y::Send, {-}
 2 & u::Send, {7}
 2 & i::Send, {8}
 2 & o::Send, {9}
 2 & p::Send, {,}
-2 & [::Send, {}
+2 & [::Send, {`%}
 
-2 & h::Send, {=}
+2 & h::Send, {+}
 2 & j::Send, {4}
 2 & k::Send, {5}
 2 & l::Send, {6}
 2 & `;::Send, {.}
-2 & '::Send, {}
+2 & '::Send, {/}
 
-2 & n::Send, {$}
+2 & n::Send, {*}
 2 & m::Send, {1}
 2 & ,::Send, {2}
 2 & .::Send, {3}
